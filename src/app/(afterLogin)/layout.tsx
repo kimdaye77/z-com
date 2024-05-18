@@ -35,6 +35,11 @@ export default function AfterLoginLayout({ children }: { children: ReactNode }) 
         <div className={style.rightSectionInner}>
           <main className={style.main}>{children}</main>
           <section className={style.rightSection}>
+            <TrendSection />
+            <div className={style.followRecommend}>
+              <h3>팔로우 추천</h3>
+              <FollowRecommend />
+            </div>
             <div style={{ marginBottom: 60, width: "inherit" }}>
               <form className={style.search}>
                 <svg width={20} viewBox="0 0 24 24" aria-hidden="true">
@@ -46,11 +51,6 @@ export default function AfterLoginLayout({ children }: { children: ReactNode }) 
               </form>
             </div>
           </section>
-          <TrendSection />
-          <div className={style.followRecommend}>
-            <h3>팔로우 추천</h3>
-            <FollowRecommend />
-          </div>
         </div>
       </div>
     </div>
